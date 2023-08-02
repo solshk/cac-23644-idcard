@@ -25,8 +25,17 @@
     --font-m: 1.8rem;
     --font-l: 2rem;
     --font-xl: 2.4rem;
-    --font-xxl: 3rem;
+    --font-xxl: 3rem; 
     --font-xxxl: 3.8rem;
+
+       /*Spacings*/
+    --spacing-128: 12.8rem;
+    --spacing-68: 6.8rem;
+    --spacing-36: 3.8rem;
+    --spacing-28: 2.8rem;
+    --spacing-16: 1.8rem;
+    --spacing-12: 1.2rem;
+    --spacing-8: 0.8rem;
 
     /*Spacings*/
     --spacing-128: 12.8rem;
@@ -35,7 +44,7 @@
     --spacing-28: 2.8rem;
     --spacing-16: 1.8rem;
     --spacing-12: 1.2rem;
-    --spacing-8: 0.8rem;
+    --spacing-8: 0.8rem; 
 }
 
 *,
@@ -163,4 +172,21 @@ footer{
 #totop:hover {
     background-color: var(--accent-solid);
     color: var(--font-light);
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto ;
+        gap: var(--spacing-16);
+        margin: var(--spacing-16);
+        grid-template-areas: 
+            "main"
+            "footer";
+    }
+    
+    .fa{
+        margin: var(--spacing-8);
+    }
 }
