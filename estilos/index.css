@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
+/*RESET*/
+:root {
+    /*Palette*/
+    --primary-solid: #fdf0d5;
+    --secondary-solid: #780000;
+    --accent-solid: #c1121f;
+
+    --bg-light: #fdf0d5;
+    --bg-dark: #780000;
+
+    --font-light: #fdf0d5;
+    --font-dark: #000000;
+
+    /*Fonts*/
+    --base-font: 'Nunito', sans-serif;
+
+    /*Font-sizes*/
+    --font-display: 4.6rem;
+
+    --font-xxs: 1.2rem;
+    --font-xs: 1.4rem;
+    --font-s: 1.6rem;
+    --font-m: 1.8rem;
+    --font-l: 2rem;
+    --font-xl: 2.4rem;
+    --font-xxl: 3rem;
+    --font-xxxl: 3.8rem;
+
+    /*Spacings*/
+    --spacing-128: 12.8rem;
+    --spacing-68: 6.8rem;
+    --spacing-36: 3.8rem;
+    --spacing-28: 2.8rem;
+    --spacing-16: 1.8rem;
+    --spacing-12: 1.2rem;
+    --spacing-8: 0.8rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--base-font);
+    font-size: 62.5%;
+    /*=1em=10px*/
+    color: var(--font-dark);
+    background-color: var(--bg-light);
+    opacity: 1;
+    background-image: linear-gradient(#000000 0.6px, transparent 0.6px),
+        linear-gradient(to right, #000000 0.6px, var(--bg-light) 0.6px);
+    background-size: 20px 20px;
+}
+
+a {
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+    font-size: 2em;
+}
+
+/*ESTILO*/
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 70px 3fr 1fr;
+    grid-template-areas: 
+    ". . header"
+    ". main ."
+    ". footer .";
+}
+
+
+main{
+    grid-area: main;
+    border: solid 2px var(--font-dark);
+    margin-bottom: var(--spacing-36);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-36);
+    justify-content: space-around;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.img{
+    width: 35%;
+    border-radius: 50%;
+    border: solid 5px var(--secondary-solid);
+}
+
+h1{
+    font-size: var(--font-xxl);
+    margin: var(--spacing-16)
+}
+
+h2{
+    font-size: var(--font-l);
+    margin: var(--spacing-12)
+}
+
+p{
+    font-size: var(--font-m);
+    margin: var(--spacing-8)
+}
+
+ul {
+    list-style-position: inside;
+    font-size: var(--font-s);
+}   
+
+footer{
+    grid-area: footer;
+    border: solid 2px var(--font-dark);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: var(--font-xxl);
+    margin-bottom: var(--spacing-68);
+    padding: var(--spacing-16);
+    background-color: var(--bg-light);
+}
+
+.fa{
+    margin: 0 var(--spacing-28);
+}
+
+.fa:hover{
+    color: var(--secondary-solid);
+    transform: scale(1.2);
+    transition: transform .2s;
+}
+
+.credits{
+    font-size: var(--font-xxs);
+}
+
+#totop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    background-color: var(--bg-dark);
+    color: var(--font-light);
+    cursor: pointer;
+    padding: 20px;
+}
+
+#totop:hover {
+    background-color: var(--accent-solid);
+    color: var(--font-light);
+}
